@@ -23,13 +23,8 @@ def count_down(COUNT):
         global timer
         timer = window.after(1000, count_down, COUNT - 1)
     else:
-        clear_inputs()
+        user_text.delete(1.0, END)
         stop_timer()
-
-
-def clear_inputs():
-    # user_text.delete(0, END)
-    user_text.delete(1.0, END)
 
 
 def callback(event):
